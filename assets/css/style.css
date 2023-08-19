@@ -1,5 +1,41 @@
-*{
-    background-color: black;
-    color: white;
+* {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
+
+:root {
+    --bg-color: #f0f0f0;
+}
+
+.mainSection {
+    padding: 1rem;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color) ;
+}
+
+@media screen and (min-width: 992px) {
+    .mainSection{
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}
+
+@media screen and (min-width: 380px){
+    .pokemonList{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 576px){
+    .pokemonList{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (min-width: 992px) {
+    .pokemonList{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
