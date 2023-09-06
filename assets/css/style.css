@@ -24,17 +24,17 @@
 }
 
 @media screen and (min-width: 380px){
-    .pokemonList{
+    .characterList{
         grid-template-columns: 1fr 1fr;
     }
 }
 @media screen and (min-width: 576px){
-    .pokemonList{
+    .characterList{
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 @media screen and (min-width: 992px) {
-    .pokemonList{
+    .characterList{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
