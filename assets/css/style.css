@@ -4,35 +4,27 @@
 }
 
 :root {
-    --bgcard-color: #202024;
+    --bgcard-color: #3b3b3b; 
     --font-color: #ffffff;
     --number-color: #000000;
     --bg-color: #f0f0f0;
-    --alive-color: rgb(84, 255, 126);
-    --dead-color: rgb(255, 90, 90);
-    --unknown-color: rgb(253, 255, 116);
+    --effect-color: #4a4a52;
 }
 
 body {
-    background-color: var(--bgcard-color);
+    background-color: #202024;
 }
 
 .logo {
     width: 100%;
-    height: 6rem;
+    height: 8rem;
 }
 
 .mainSection {
-    background-color: #3FB2BF;
+    background-color: #cfcfcf;
     padding: 1rem;
     width: 100vw;
     height: 100vh;
-    @media screen and (min-width: 992px) {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
 }
 
 #characterList {
@@ -41,15 +33,21 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    @media screen and (min-width: 728px) {
-        grid-template-columns: 1fr 1fr;
-    }
-    @media screen and (min-width: 650px) {
-        grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
-    }
-    @media screen and (min-width: 992px) {
-        grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
-    }
+}
+
+#loadBtn{
+    display: block;
+    margin: 0 auto;
+    background-color: var(--bgcard-color);
+    color: var(--font-color);
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+#loadBtn:hover{
+    background-color: var(--effect-color);
+    cursor: pointer;
 }
 
 .character {
@@ -59,19 +57,18 @@ body {
     background-color: var(--bgcard-color);
     color: var(--font-color);
     border-radius: 0.5rem;
-    img {
-        max-width: 100%;
-        border-radius: 0.5rem 0.5rem 0 0;
-    }
-    &.Alive {
-        color: var(--alive-color);
-    }
-    &.Dead {
-        color: var(--dead-color);
-    }
-    &.unknown {
-        color: var(--unknown-color);
-    }
+}
+
+.Alive {
+    color: rgb(84, 255, 126);
+}
+
+.Dead {
+    color: rgb(255, 90, 90);
+}
+
+.unknown {
+    color: rgb(253, 255, 116);
 }
 
 .name {
@@ -85,4 +82,36 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+@media screen and (min-width: 992px) {
+    .mainSection {
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}
+
+@media screen and (min-width: 728px) {
+    #characterList {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    #characterList {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #characterList {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
