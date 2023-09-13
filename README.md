@@ -1,4 +1,4 @@
-# 🧪 Rick e Morty API
+# 🧪 Rick and Morty API
 
 ![Preview](./.github/preview.png)
 
